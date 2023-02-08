@@ -1,1 +1,3 @@
+# BFO Common Logic Implementation
 
+In comformance with [ISO 21838-2:2020](https://www.iso.org/standard/74572.html), BFO classes and relations are represented in Common Logic - a First-Order Logic framework for a family of formal languages, specified in [ISO 24707:2007](https://www.iso.org/standard/39175.html). Representation of BFO in Common Logic facilitates interoperability with projects such as [COLORE](https://github.com/gruninger/colore), use with theorem prover tools such as the [Heterogeneous Tool Set](http://hets.eu/), and prolog libraries such as [cltools](https://github.com/cmungall/cltools).
