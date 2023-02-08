@@ -42,13 +42,14 @@ This is the official repository for the Basic Formal Ontology (BFO) artifact spe
 
 BFO is a widely-used upper-level ontology that is conformant to the requirements specified in [ISO/IEC 21838‑1](https://www.iso.org/standard/71954.html) for top-level ontologies. Ontologies conformant to this standard promote interoperability among domain-level ontologies, thereby supporting the design and deployment of more specific ontology suites. 
 
-**Directory Structure**
-BFO User Guide - 
-BFO Design Patterns - 
-BFO Formalizations - 
-BFO Validation - 
+### Directory Structure
 
-**Taking Time Seriously**
+    BFO User Guide - 
+    BFO Design Patterns - 
+    BFO Formalizations - 
+    BFO Validation - 
+
+### Taking Time Seriously
 A long-standing issue among BFO users and developers has concerned how best to represent time. Importantly, issues concerning time in BFO stem from implementations of BFO in restricted formal languages. To see the issue, consider modeling a vehicle having an engine part at some time, but losing that engine part at another. 
 Representing BFO using a language with the expressivity of, say, First-Order Logic, this could be expressed as - roughly:
 
@@ -56,11 +57,11 @@ Representing BFO using a language with the expressivity of, say, First-Order Log
 
 In words, the vehicle has an engine part at time_1, but does not have an engine part at time_2. Here we have taken advantage of the fact that FOL allows using ternary relations; at most binary relations, however, are permitted in restrictive languages, such as the Web Ontology Language (OWL), in the interest of maintaining decidability of the language. This is to say, there is no straightfoward representation of the content of (1) in OWL. Given the need to represent time and change in many domains, proposals have been developed for representing such phenomena within the binary constraints of OWL. Examples include: 
 
-A. Temporalized Relations - 
-B. Temporally Qualified Continuants - 
-C. Temporal Stases - 
-D. Temporal Snapshots - 
-E. Temporal Annotations - 
+    A. Temporalized Relations - 
+    B. Temporally Qualified Continuants - 
+    C. Temporal Stases - 
+    D. Temporal Snapshots - 
+    E. Temporal Annotations - 
 
 For each proposal, there are benefits and costs worth investigating. Each is a plausible avenue of research in the interest of more rigorous representations of time in restricted formal languages. More detailed expositions and details on current advances in these research projects can be viewed in respective 'Temporal Profile' repositories contained in the BFO GitHub Organization. 
 
@@ -71,12 +72,12 @@ This is to say, that while
 
 BFO specified in [ISO 21838-2:2020](https://www.iso.org/standard/74572.html) includes temporal classes, such as One-Dimensional Temporal Region and Temporal Instant. 
 
-**Further Reading**
+### Further Reading
 For further information about the philosophical motivations for adopting terminological content represented in BFO, see [](). 
 For further information about building ontologies using BFO artifacts and strategies, see [Building Ontologies with Basic Formal Ontology](). 
 For information about upcoming and past events concerning BFO, see [](). 
 
-**BFO Development Team**
-[Barry Smith](https://www.buffalo.edu/cas/philosophy/faculty/faculty_directory/smith-b.html), SUNY Distinguished Professor of Philosophy and Julian Park Chair, University at Buffalo, Department of Philosophy
-[Alan Ruttenberg](https://dental.buffalo.edu/faculty/home.html?ubit=alanrutt), Director of Clinical and Translational Data Exchange, University at Buffalo
+### BFO Development Team
+[Barry Smith](https://www.buffalo.edu/cas/philosophy/faculty/faculty_directory/smith-b.html), SUNY Distinguished Professor of Philosophy and Julian Park Chair, University at Buffalo, Department of Philosophy\
+[Alan Ruttenberg](https://dental.buffalo.edu/faculty/home.html?ubit=alanrutt), Director of Clinical and Translational Data Exchange, University at Buffalo\
 [John Beverley](https://www.buffalo.edu/cas/philosophy/faculty/faculty_directory/john-beverley.html), Assistant Professor, University at Buffalo
