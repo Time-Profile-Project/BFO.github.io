@@ -6,36 +6,36 @@ graph TD
     A(Entity) --> C(Occurrent)
     B(Continuant) --> D(Specifically Dependent<br> Continuant)
     B(Continuant) --> E(Generically Dependent<br> Continuant)
-    B(Continuant) --> F(Independent Continuant)
-    F(Independent Continuant) --> G(Material Entity)
-    F(Independent Continuant) --> H(Immaterial Entity)
+    B(Continuant) --> F(Independent<br> Continuant)
+    F(Independent<br> Continuant) --> G(Material Entity)
+    F(Independent<br> Continuant) --> H(Immaterial<br> Entity)
     D(Specifically Dependent<br> Continuant) --> I(Quality)
-    D(Specifically Dependent<br> Continuant) --> J(Realizable Entity)
-    I(Quality) --> K(Relational Quality)
-    J(Realizable Entity) --> L(Role)
-    J(Realizable Entity) --> M(Disposition)
+    D(Specifically Dependent<br> Continuant) --> J(Realizable<br> Entity)
+    I(Quality) --> K(Relational<br> Quality)
+    J(Realizable<br> Entity) --> L(Role)
+    J(Realizable<br> Entity) --> M(Disposition)
     M(Disposition) --> N(Function)
-    H(Immaterial Entity) --> O(Site)
-    H(Immaterial Entity) --> P(Spatial Region)
-    H(Immaterial Entity) --> Q(Continuant Fiat Boundary)
-    Q(Continuant Fiat<br> Boundary) --> R(Fiat Point)
-    Q(Continuant Fiat<br> Boundary) --> S(Fiat Surface)
-    Q(Continuant Fiat<br> Boundary) --> T(Fiat Line)
-    P(Spatial Region) --> U(One-Dimensional<br> Spatial Region)
-    P(Spatial Region) --> V(Two-Dimensional<br> Spatial Region)
-    P(Spatial Region) --> W(Three-Dimensional<br> Spatial Region)
-    G(Material Entity) --> X(Fiat Object Part)
-    G(Material Entity) --> Y(Object Aggregate)
-    G(Material Entity) --> Z(Object)
+    H(Immaterial<br> Entity) --> O(Site)
+    H(Immaterial<br> Entity) --> P(Spatial<br> Region)
+    H(Immaterial<br> Entity) --> Q(Continuant Fiat<br> Boundary)
+    Q(Continuant Fiat<br> Boundary) --> R(Fiat<br> Point)
+    Q(Continuant Fiat<br> Boundary) --> S(Fiat<br> Surface)
+    Q(Continuant Fiat<br> Boundary) --> T(Fiat<br> Line)
+    P(Spatial<br> Region) --> U(One-Dimensional<br> Spatial Region)
+    P(Spatial<br> Region) --> V(Two-Dimensional<br> Spatial Region)
+    P(Spatial<br> Region) --> W(Three-Dimensional<br> Spatial Region)
+    G(Material<br> Entity) --> X(Fiat Object Part)
+    G(Material<br> Entity) --> Y(Object<br> Aggregate)
+    G(Material<br> Entity) --> Z(Object)
     C(Occurrent) --> AA(Process)
-    C(Occurrent) --> AB(Process Boundary)
-    C(Occurrent) --> AC(Temporal Region)
-    C(Occurrent) --> AD(Spatiotemporal Region)
+    C(Occurrent) --> AB(Process<br> Boundary)
+    C(Occurrent) --> AC(Temporal<br> Region)
+    C(Occurrent) --> AD(Spatiotemporal<br> Region)
     AA(Process) --> AE(History)
-    AC(Temporal Region) --> AF(Zero-Dimensional<br> Temporal Region)
-    AC(Temporal Region) --> AI(One-Dimensional<br> Temporal Region)
-    AF(Zero-Dimensional<br> Temporal Region) --> AG(Temporal Instant)
-    AI(One-Dimensional<br> Temporal Region) --> AH(Temporal Interval)
+    AC(Temporal<br> Region) --> AF(Zero-Dimensional<br> Temporal Region)
+    AC(Temporal<br> Region) --> AI(One-Dimensional<br> Temporal Region)
+    AF(Zero-Dimensional<br> Temporal Region) --> AG(Temporal<br> Instant)
+    AI(One-Dimensional<br> Temporal Region) --> AH(Temporal<br> Interval)
    ```
 
 This is the official repository for the Basic Formal Ontology (BFO) artifact specified in [ISO 21838-2:2020](https://www.iso.org/standard/74572.html), as well as the primary repository for the Basic Formal Ontology GitHub Organization. Here you will find the BFO User Guide, design patterns, implementations of BFO in formal languages, and artifacts used for validating BFO. 
@@ -50,24 +50,39 @@ BFO is a widely-used upper-level ontology that is conformant to the requirements
     BFO Validation - 
 
 ### Taking Time Seriously
-A long-standing issue among BFO users and developers has concerned how best to represent time. Importantly, issues concerning time in BFO stem from implementations of BFO in restricted formal languages. To see the issue, consider modeling a vehicle having an engine part at some time, but losing that engine part at another. 
-Representing BFO using a language with the expressivity of, say, First-Order Logic, this could be expressed as - roughly:
+A long-standing issue among BFO users and developers has concerned how best to represent time. Importantly, issues concerning time in BFO stem from implementations of BFO in restricted formal languages such as the Web Ontology Language (OWL). OWL does not allow for direct representation of relations with arity higher than two. To illustrate the issue, consider modeling a vehicle having an engine part at some time, but losing that engine part at another. An expressive language such as First-Order Logic (FOL) would permit the following representation: 
 
     (1) has_part(vehicle, engine, time_1) & ~has_part(vehicle, engine, time_2)
 
-In words, the vehicle has an engine part at time_1, but does not have an engine part at time_2. Here we have taken advantage of the fact that FOL allows using ternary relations; at most binary relations, however, are permitted in restrictive languages, such as the Web Ontology Language (OWL), in the interest of maintaining decidability of the language. This is to say, there is no straightfoward representation of the content of (1) in OWL. Given the need to represent time and change in many domains, proposals have been developed for representing such phenomena within the binary constraints of OWL. Examples include: 
+Since FOL allows using ternary relations. OWL's restriction to at most binary relations precludes expressions like (1); indeed, there is no simple, straightforward way
+to represent the content of (1) in OWL. Given the need to represent time and change in many domains and the wide use of OWL in ontology circles, proposals have been offered by users of BFO for representing such phenomena within the binary constraints of OWL. Examples include: 
 
     A. Temporalized Relations - 
-    B. Temporally Qualified Continuants - 
+    B. [Temporally Qualified Continuants](https://jansenludger.github.io/home/Texte/TQC%20Freiburg8%20Proceedings.pdf) - 
     C. Temporal Stases - 
-    D. Temporal Snapshots - 
+    D. [Temporal Snapshots](https://oborel.github.io/obo-relations/temporal-semantics/) - 
     E. Temporal Annotations - 
+    F. Minimal Temporality - 
 
-For each proposal, there are benefits and costs worth investigating. Each is a plausible avenue of research in the interest of more rigorous representations of time in restricted formal languages. More detailed expositions and details on current advances in these research projects can be viewed in respective 'Temporal Profile' repositories contained in the BFO GitHub Organization. 
+Each is a plausible avenue of research in the interest of more rigorous representations of time in restricted formal languages. Details for each research project can be viewed in respective 'Temporal Profile' repositories contained in the BFO GitHub Organization. 
 
-Motivation for Temporal Profiles of BFO stems in part from recognizing that rigorously representing time is more relevant to some domains than others, and more useful for researchers than to others. As an extreme example, consider than representing the domain of mathematics - rather than the practice - a careful formalizatin of time is arguably unnecessary. For a less extreme example, consider that while users in the [Open Biological and Biomedical Ontology Foundry](https://obofoundry.org/) have a need to represent time, and do so using a combination of BFO and the [Relations Ontology](https://obofoundry.org/ontology/ro.html), users have - for many years - employed a formally weak representation of time with great success. Indeed, a charitable reading of early [criticisms](https://github.com/cmungall/trel-crit/raw/master/trc.pdf) of the Temporalized Relations proposal is simply that rigorously formalizing time involves significant labor, OBO users do not have a need for such rigor, and so do not have a need to labor. On the other hand, consider that the [Industrial Ontology Foundry](https://www.industrialontologies.org/) which uses BFO as its top-level architecture, anticipates needing a rigorous formalization of time, and adopts the Temporalized Relations strategy for that reason. Moreover, given [recent work](https://pubmed.ncbi.nlm.nih.gov/36534832/) demonstrating the importance of rigorous axiomatization of ontologies to supplementing machine learning pipelines with minimal datasets, ontologies extending BFO used in such pipelines may find rigorous formalizations of time palatable. 
+### Temporal Profiles 
+BFO is a top-level, domain-neutral ontology, designed to consist of terminological content that spans most scientific disciplines. Classes such as Temporal Region, Temporal Instant, Temporal Interval, etc., seem well within scope. There are, however, reasons to refrain from providing significant constraints on time in BFO:
 
-In summary then, it is not the case that all BFO users require a rigorous characterization of time. That nevertheless leaves an open question for users who do require an implementation of BFO characterizing time in restricted languages like OWL. At present, this is an open research project for BFO developers and collaborators. Alan Ruttenberg has produced an impressive formalization of the Temporalized Relations strategy, semi-[formal characterizations](https://jansenludger.github.io/home/Texte/TQC%20Freiburg8%20Proceedings.pdf) of the Temporally Qualified Continuants strategy have been developed, and members of the Relations Ontology have [endorsed](https://oborel.github.io/obo-relations/temporal-semantics/) the Temporal Snapshot strategy. 
+    1. Scientific domains do not treat time uniformly. Economists, for example, measure economic constructs using time series, i.e. presuming a model of discrete time, whereas physicists typically treat time as continuous. This observation speaks in favor of BFO remaining neutral on questions over the discreteness of continuity of time. 
+    2. Not all scientific domains require a robust characterization of time, e.g. the domain of mathematics has no obvious need for time. 
+    3. Given community goals, even if users need some characterization of time, they do not always need a robust characterization of time, e.g. [Open Biological and Biomedical Ontology Foundry](https://obofoundry.org/) users have, for many years, employed a formally weak representation of time with great success.
+    
+This last point is worth belaboring. Deploying a BFO-based, robust, formalization of time can be costly, involving re-educating users, updating existing ontologies, perhaps even rewriting portios of codebases, etc. OBO users have not often had a need for such rigor, and so do not have a need to bear such costs. A charitable reading of early [criticisms](https://github.com/cmungall/trel-crit/raw/master/trc.pdf) of the Temporalized Relations strategy - which provides a rather robust formalization of time in BFO - makes just this point.  
+
+On the othe hand, there are reasons that speak in favor of providing formal guidance for modeling time in BFO:
+
+    4. Other foundry efforts, such as the [Industrial Ontology Foundry](https://www.industrialontologies.org/) which uses BFO as its top-level architecture, anticipate the need for a rigorous formalization of time.
+    5. [Recent work](https://pubmed.ncbi.nlm.nih.gov/36534832/) demonstrating the importance of rigorous axiomatization of ontologies used to supplement machine learning pipelines with minimal datasets, suggests rigorous BFO formalizations of time ontologies may be useful in such contexts. 
+
+What these observations suggest is that while there are strong motivations for BFO providing - perhaps significant - guidance to users who require a robust formalization of time, imposing any specific formalization of time - such as the A - E proposals - on all users would be in some cases unnecessarily onerous. To satisfy needs of the community then, the BFO development team will follow a strategy of deploying 'Temporal Profiles' which will provide users options for representing time in their domains. 
+
+
 
 Putting aside the varying relative maturity levels of each strategy, there is a further pressing question concerning interoperability. BFO is a top-level ontology designed to provide a common hierarchy across all scientific research; interoperability is its motivation. With this in mind, it is thus incumbent on developers to demonstrate not only that their preferred formalization of time conforms to BFO, but also that interpretations, formal mappings, or provable containments exists across strategies. This is, admittedly, a great deal of work, but it is a consequence of sustaining interoperability, a goal our community prizes. 
 
