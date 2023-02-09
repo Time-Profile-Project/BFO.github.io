@@ -73,8 +73,8 @@ Putting aside the varying relative maturity levels of each strategy, there is a 
 
 
 ### Further Reading
-For further information about the philosophical motivations for adopting terminological content represented in BFO, see [](). 
-For further information about building ontologies using BFO artifacts and strategies, see [Building Ontologies with Basic Formal Ontology](https://mitpress.mit.edu/9780262527811/building-ontologies-with-basic-formal-ontology/). 
+For further information about the philosophical motivations for adopting terminological content represented in BFO, see [](). \
+For further information about building ontologies using BFO artifacts and strategies, see [Building Ontologies with Basic Formal Ontology](https://mitpress.mit.edu/9780262527811/building-ontologies-with-basic-formal-ontology/). \
 For information about upcoming and past events concerning BFO, see [NCOR](https://ncorwiki.buffalo.edu/index.php/Main_Page). 
 
 ### BFO Development Team
