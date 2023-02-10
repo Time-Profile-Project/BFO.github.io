@@ -41,28 +41,29 @@ This is the official repository for the Basic Formal Ontology (BFO) artifact spe
 
 BFO is a widely-used upper-level ontology that is conformant to the requirements specified in [ISO/IEC 21838‑1](https://www.iso.org/standard/71954.html) for top-level ontologies. Ontologies conformant to this standard promote interoperability among domain-level ontologies, thereby supporting the design and deployment of more specific ontology suites. 
 
-### Directory Structure
+## Directory Structure
 
     BFO User Guide - 
     BFO Design Patterns - 
     BFO Formalizations - 
     BFO Validation - 
     
-### Versioning and Release Process
+## Versioning and Release Process
 
 
 
-### Basic Formal Ontology Reading
+## Basic Formal Ontology Reading
 For further information about the philosophical motivations for adopting terminological content represented in BFO, see [](). \
 For further information about building ontologies using BFO artifacts and strategies, see [Building Ontologies with Basic Formal Ontology](https://mitpress.mit.edu/9780262527811/building-ontologies-with-basic-formal-ontology/). \
 For information about upcoming and past events concerning BFO, see [NCOR](https://ncorwiki.buffalo.edu/index.php/Main_Page). 
 
-### Basic Formal Ontology Development Team
+## Basic Formal Ontology Development Team
 [Barry Smith](https://www.buffalo.edu/cas/philosophy/faculty/faculty_directory/smith-b.html), SUNY Distinguished Professor of Philosophy and Julian Park Chair, University at Buffalo, Department of Philosophy\
 [Alan Ruttenberg](https://dental.buffalo.edu/faculty/home.html?ubit=alanrutt), Director of Clinical and Translational Data Exchange, University at Buffalo\
 [John Beverley](https://www.buffalo.edu/cas/philosophy/faculty/faculty_directory/john-beverley.html), Assistant Professor, University at Buffalo
 
-### Taking Time Seriously
+
+## Taking Time Seriously
 A long-standing issue among BFO users and developers has concerned how best to represent time. Importantly, issues concerning time in BFO stem from implementations of BFO in restricted formal languages such as the Web Ontology Language (OWL). OWL does not allow for direct representation of relations with arity higher than two. To illustrate the issue, consider modeling a vehicle having an engine part at some time, but losing that engine part at another. An expressive language such as First-Order Logic (FOL) would permit the following representation: 
 
     (1) has_part(vehicle, engine, time_1) & ~has_part(vehicle, engine, time_2)
