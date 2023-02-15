@@ -50,20 +50,18 @@ BFO is a widely-used upper-level ontology that is conformant to the requirements
     
 ## Versioning and Release Process
 
-
-
 ## Basic Formal Ontology Reading
 For further information about the philosophical motivations for adopting terminological content represented in BFO, see [](). \
 For further information about building ontologies using BFO artifacts and strategies, see [Building Ontologies with Basic Formal Ontology](https://mitpress.mit.edu/9780262527811/building-ontologies-with-basic-formal-ontology/). \
 For information about upcoming and past events concerning BFO, see [NCOR](https://ncorwiki.buffalo.edu/index.php/Main_Page). 
 
-## Basic Formal Ontology Development Team
+## Development Team
 [Barry Smith](https://www.buffalo.edu/cas/philosophy/faculty/faculty_directory/smith-b.html), SUNY Distinguished Professor of Philosophy and Julian Park Chair, University at Buffalo, Department of Philosophy\
 [Alan Ruttenberg](https://dental.buffalo.edu/faculty/home.html?ubit=alanrutt), Director of Clinical and Translational Data Exchange, University at Buffalo\
 [John Beverley](https://www.buffalo.edu/cas/philosophy/faculty/faculty_directory/john-beverley.html), Assistant Professor, University at Buffalo
 
 
-## Taking Time Seriously
+# Taking Time Seriously
 A long-standing issue among BFO users and developers has concerned how best to represent time. Importantly, issues concerning time in BFO stem from implementations of BFO in restricted formal languages such as the Web Ontology Language (OWL). OWL does not allow for direct representation of relations with arity higher than two. To illustrate the issue, consider modeling a vehicle having an engine part at some time, but losing that engine part at another. An expressive language such as First-Order Logic (FOL) would permit the following representation: 
 
     (1) has_part(vehicle, engine, time_1) & ~has_part(vehicle, engine, time_2)
@@ -80,7 +78,7 @@ to represent the content of (1) in OWL. Given the need to represent time and cha
 
 Each is a plausible avenue of research in the interest of more rigorous representations of time in restricted formal languages. Details for each research project can be viewed in respective 'Temporal Profile' repositories contained in the BFO GitHub Organization. 
 
-### Temporal Profiles 
+## Temporal Profiles 
 BFO is a top-level, domain-neutral ontology, designed to consist of terminological content that spans most scientific disciplines. Classes such as Temporal Region, Temporal Instant, Temporal Interval, etc., seem well within scope. There are, however, reasons to refrain from providing significant constraints on time in BFO:
 
 > 1. Scientific domains do not treat time uniformly. Economists, for example, measure economic constructs using time series, i.e. presuming a model of discrete time, whereas physicists typically treat time as continuous. This observation speaks in favor of BFO remaining neutral on questions over the discreteness of continuity of time. 
@@ -94,17 +92,26 @@ On the other hand, there are reasons that speak in favor of providing formal gui
 > 4. Other foundry efforts, such as the [Industrial Ontology Foundry](https://www.industrialontologies.org/) which uses BFO as its top-level architecture, anticipate the need for a rigorous formalization of time.
 > 5. [Recent work](https://pubmed.ncbi.nlm.nih.gov/36534832/) demonstrating the importance of rigorous axiomatization of ontologies used to supplement machine learning pipelines with minimal datasets, suggests rigorous BFO formalizations of time ontologies may be useful in such contexts. 
 
-What these observations suggest is that while there are strong motivations for BFO providing - perhaps significant - guidance to users who require a robust formalization of time, imposing any specific formalization of time - such as the A - F proposals - on all users would be in some cases unnecessarily onerous. To satisfy needs of the community then, the BFO development team encourages a strategy of developing and deploying Temporal Profiles which will provide users options for representing time in their domains. 
+What these observations suggest is that while there are strong motivations for BFO providing - perhaps significant - guidance to users who require a robust formalization of time, imposing any specific formalization of time - such as the A - F proposals - on all users would be in some cases unnecessarily onerous. To satisfy needs of the community then, the BFO development team encourages a strategy of developing and deploying Temporal Profiles which will provide users options for representing time in their domains.
 
-Temporal Profiles are designed to be extensions of OWL formalization of BFO that impose axiom constraints concerning time and change. Consequently, with respect to BFO, the scope of Temporal Profiles is limited to: 
+## Temporal Profile Implementation
+Temporal Profiles should be implemented in a decidable flavor of OWL, such as OWL2. While terminological content differs across temporal profiles, developers are encouraged to abide by the following design principles: 
+
+> 
+
+## Temporal Profile Artifacts
+Temporal Profile Artifacts are artifacts designed to represent extensions of the OWL formalization of BFO that impose axiom constraints concerning time and change. Temporal Profile Artifacts should be represented in some flavor of RDF, e.g. ttl, owl. 
+
+With respect to BFO, the scope of Temporal Profiles should include treatment of classes and relationships that includes: 
 
 > Temporal Region and subclasses \
 > Spatiotemporal Region \
-> Object properties relating to time, whether explicit or implicit \
+> Object properties relating to time, whether explicit or implicit 
 
+Motivating use cases often vary based on domain and user community. We recommend developers use, as a starting point, design patterns and use cases concerning time and change found in the article [Basic Formal Ontology: Case Studies](https://philpapers.org/archive/OTTBBF.pdf). There the authors present seven design patterns based on the FOL implementation of BFO. 
 
-
-Putting aside the varying relative maturity levels of each strategy, there is a further pressing question concerning interoperability. BFO is a top-level ontology designed to provide a common hierarchy across all scientific research; interoperability is its motivation. With this in mind, it is thus incumbent on developers to demonstrate not only that their preferred formalization of time conforms to BFO, but also that interpretations, formal mappings, or provable containments exists across strategies. This is, admittedly, a great deal of work, but it is a consequence of sustaining interoperability, a goal our community prizes. 
+## Temporal Profile Integration
+Putting aside the varying relative maturity levels of each Temporal Profile, there is a further pressing question concerning interoperability. BFO is a top-level ontology designed to provide a common hierarchy across all scientific research; interoperability is its motivation. With this in mind, it is thus incumbent on developers to demonstrate not only that their preferred formalization of time conforms to BFO, but also that interpretations, formal mappings, or provable containments exists across strategies. This is, admittedly, a great deal of work, but it is a consequence of sustaining interoperability, a goal our community prizes. 
 
 ### Temporal Profiles Further Reading
 [Temporally Qualified Continuants](https://jansenludger.github.io/home/Texte/TQC%20Freiburg8%20Proceedings.pdf) \
