@@ -37,9 +37,7 @@ graph TD
     AI(One-Dimensional<br> Temporal Region) --> AH(Temporal<br> Interval)
    ```
 
-This is the official repository for the Basic Formal Ontology (BFO) artifact specified in [ISO 21838-2:2020](https://www.iso.org/standard/74572.html), as well as the primary repository for the Basic Formal Ontology GitHub Organization. Here you will find the BFO User Guide, BFO-based design patterns, implementations of BFO in formal languages, and artifacts used for validating BFO. 
-
-BFO is a widely-used upper-level ontology that is conformant to the requirements specified in [ISO/IEC 21838‑1](https://www.iso.org/standard/71954.html) for top-level ontologies. Ontologies conformant to this standard promote interoperability among domain-level ontologies, thereby supporting the design and deployment of more specific ontology suites. 
+This repository maintains the Basic Formal Ontology (BFO) artifact conformant to the requirements specified in [ISO/IEC 21838‑1](https://www.iso.org/standard/71954.html) for top-level ontologies. Ontologies conformant to this standard promote interoperability among domain-level ontologies, thereby supporting the design and deployment of more specific ontology suites. 
 
 ## Directory Structure
 
@@ -50,15 +48,15 @@ BFO is a widely-used upper-level ontology that is conformant to the requirements
     
 ## Versioning and Release Process
 
+
 ## Basic Formal Ontology Reading
-For further information about the philosophical motivations for adopting terminological content represented in BFO, see [](). \
 For further information about building ontologies using BFO artifacts and strategies, see [Building Ontologies with Basic Formal Ontology](https://mitpress.mit.edu/9780262527811/building-ontologies-with-basic-formal-ontology/). \
 For information about upcoming and past events concerning BFO, see [NCOR](https://ncorwiki.buffalo.edu/index.php/Main_Page). 
 
 ## Development Team
-[Barry Smith](https://www.buffalo.edu/cas/philosophy/faculty/faculty_directory/smith-b.html), SUNY Distinguished Professor of Philosophy and Julian Park Chair, University at Buffalo, Department of Philosophy\
-[Alan Ruttenberg](https://dental.buffalo.edu/faculty/home.html?ubit=alanrutt), Director of Clinical and Translational Data Exchange, University at Buffalo\
-[John Beverley](https://www.buffalo.edu/cas/philosophy/faculty/faculty_directory/john-beverley.html), Assistant Professor, University at Buffalo
+* [Barry Smith](https://www.buffalo.edu/cas/philosophy/faculty/faculty_directory/smith-b.html), SUNY Distinguished Professor of Philosophy and Julian Park Chair, University at Buffalo, Department of Philosophy\
+* [Alan Ruttenberg](https://dental.buffalo.edu/faculty/home.html?ubit=alanrutt), Director of Clinical and Translational Data Exchange, University at Buffalo\
+* [John Beverley](https://www.buffalo.edu/cas/philosophy/faculty/faculty_directory/john-beverley.html), Assistant Professor, University at Buffalo
 
 
 # Taking Time Seriously
