@@ -3,7 +3,7 @@ BFO Common Logic Axiomatization, generated 2021/11/12
 Author: Alan Ruttenberg - alanruttenberg@gmail.com
 This work is licensed under a Creative Commons "Attribution 4.0 International" license: https://creativecommons.org/licenses/by/4.0/'
 
- (cl:text 
+ (cl:text
 
   (cl:ttl https://basic-formal-ontology.org/2020/formulas/clif/continuant-mereology.cl
 
